@@ -71,3 +71,7 @@ public class Review {
     public Boolean getIsApproved() { return isApproved; }
     public void setIsApproved(Boolean isApproved) { this.isApproved = isApproved; }
 }
+
+
+
+
