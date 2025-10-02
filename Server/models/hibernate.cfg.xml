@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database Connection Settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/movie_db</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">password</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Optional Properties -->
+        <property name="hibernate.show_sql">true</property> <!-- Show SQL in console -->
+        <property name="hibernate.hbm2ddl.auto">update</property> <!-- Auto-create/update schema -->
+        <property name="hibernate.format_sql">true</property> <!-- Format SQL output -->
+
+        <!-- Mapping with Annotations (No .hbm.xml files needed) -->
+        <mapping class="com.example.models.User"/>
+        <mapping class="com.example.models.Review"/>
+        <mapping class="com.example.models.Rating"/>
+        <mapping class="com.example.models.Movie"/>
+    </session-factory>
+</hibernate-configuration>
